@@ -1,0 +1,419 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+  background-color: #0f6b5b;
+
+  
+}
+
+.main-header{
+    display: flex;
+    align-items: center;
+    background-color: #1A6B5A ;
+    width:100%;
+    justify-content: space-between; /**  spaces out the logo and navigation links **/
+    height: 80px;
+    position:relative;/*  allows for absolute positioning of the navigation links **/
+}
+.logo{
+    width: auto;
+    height: 70px;
+    height: 70px;
+    margin-top: 5px;
+}
+.main-nav-links{
+   z-index: 1000;
+   text-decoration: none;
+   padding: 30px;
+   margin-left: auto; /**  pushes the links to the right **/
+   cursor: pointer;
+
+}
+
+.main-nav-links a{
+    text-decoration: none;
+    padding: 30px;
+    color: #fff;
+    font-weight: 600;
+    font-family: monospace;
+    font-size: x-large;
+    
+}
+.logo-text {
+  color: #fff;
+  font-size: medium;
+  font-weight: 700;
+}
+.logo-box{
+  display: flex;/**  uses flexbox to align the logo and text **/
+  align-items: center;/*  vertically centers the logo and text **/
+  gap: 8px;/*  adds space between the logo and text **/
+  margin-left: 45px;/*  adds space to the right of the logo box **/
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.slide{
+    position: relative;
+    width: 100%;
+    height: 500px;
+
+}
+.slide img {
+  display: block;
+  width: 100%;
+  height:100%;
+  object-fit: cover;/*  ensures the image covers the entire slide area without distortion **/
+}
+.slide-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  color: #fff;
+  font-size: x-large;
+  text-shadow: black 1px 1px 2px, black 0 0 25px, black 0 0 5px;
+}
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 90%;
+  margin: -60px auto 0 auto;
+  position: relative;
+  z-index: 20;
+  
+}
+.card {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  max-height: 150px;
+  padding: 25px;
+  flex: 1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,2);
+}
+
+.card:active {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  color: #1A6B5A;
+  font-size: medium;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card p {
+  color: #444;
+  font-size: small;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.card a {
+  color: #1a6b5a;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.about-section {
+  margin-top: -120px;
+  background-color: #1A6B5A;
+  padding: 60px 20px;
+  text-align: center;
+
+}
+.about-text{
+  margin-top: 100px;
+
+}
+.about-section h2{
+  color: #fff;
+  font-size: x-large;
+  margin-bottom: 20px;
+}
+.about-section p{
+  color: #f0f0f0;
+  font-size: medium;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  align-items: right;
+}
+
+.footer {
+  background-color: #1d7a6b;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: -40px;
+
+}
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.membership-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1A6B5A;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: small;
+  text-shadow: none;
+  font-family: sans-serif;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.membership-btn:hover {
+  background-color: #145a4c;
+  transform: translateY(-2px);
+}
+
+.dog-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));/* creates a responsive grid with a minimum column width of 200px and automatically fills the available space with as many columns as possible */
+  gap: 20px;
+  padding: 40px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dog-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+/* Page background */
+body{
+    background-color: #0f6b5b;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for all cards */
+.dog-cards-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+    padding: 50px;
+}
+
+/* Individual card */
+.dog-card{
+    width: 230px;
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Dog images */
+.dog-card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Text section */
+.card-body{
+    background-color: #e9e9e9;
+    padding: 15px;
+}
+
+/* Paragraph styling */
+.card-body p{
+    margin: 8px 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* Breed title */
+.card-body strong{
+    font-size: 18px;
+}
+
+/* ACTIVITIES PAGE */
+
+.activities-page-content {
+  background-color: #126b57;
+  color: white;
+}
+
+.activities-opening-section {
+  min-height: 320px;
+  background-image: url("activities-background.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activities-opening-overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+  max-width: 800px;
+}
+
+.activities-opening-overlay h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.activities-opening-overlay p {
+  font-size: 18px;
+}
+
+.activities-list-section {
+  padding: 50px 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.activity-description-panel {
+  background-color: #f4f4f4;
+  color: #222;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 25px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.activity-section-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.activity-text-content h2 {
+  color: #126b57;
+  margin-bottom: 12px;
+}
+
+.activity-text-content p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* ABOUT US GOALS SECTION */
+
+.about-goals-section {
+  background-color: #126b57;
+  color: white;
+  text-align: center;
+  padding: 70px 20px 95px 20px;
+  box-sizing: border-box;
+}
+
+.about-goals-section h2 {
+  margin: 0 0 12px 0;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.about-goals-text {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.about-goals-text p {
+  margin: 3px 0;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+
+/* ABOUT US FOOTER SECTION */
+
+.about-footer {
+  background-color: #1f8675;
+  color: white;
+  padding: 35px 20px;
+  box-sizing: border-box;
+}
+
+.about-footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 120px;
+  text-align: center;
+}
+
+.about-footer-social h4,
+.about-footer-contact h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.about-footer-social p,
+.about-footer-contact p {
+  margin: 3px 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.about-footer-social a,
+.about-footer-contact a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
+
